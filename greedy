@@ -1,0 +1,31 @@
+# include <math.h>
+# include <cs50.h>
+# include <stdio.h>
+
+int main (void)
+{
+    float change;
+    
+    float q=25;
+    float d=10;
+    float n=5;
+    float p=1;
+   
+    int coins=0;
+    
+    do
+    {
+        printf ("How much change is owed?\n");
+        change = GetFloat();
+    } 
+    while (change <=0);
+    
+    int ch = (int) round (change*100);
+    
+        for (; ch>=q; ch=ch-q, coins++);    //for quarters
+        for (; ch>=d; ch=ch-d, coins++);    //for dimes
+        for (; ch>=n; ch=ch-n, coins++);    //for nickels
+        for (; ch>=p; ch=ch-p, coins++);    //for pennies
+    
+    printf ("%i\n", coins);
+}
