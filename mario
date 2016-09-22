@@ -10,18 +10,18 @@ int main(void)
         height = GetInt();
     }
     while ((height<0) || (height>23));
+    
+    for (int x=2; x<height+2; x++)
     {
-        for (int x=2; x<height+2; x++)
-        {
-            for (int s=height+1; s>x; s--)
-            { 
-                printf (" ");
-            }
-            for (int d=2; d<x+2; d++)
-            {
-                printf ("#");
-            }  
-        printf ("\n");
+        for (int s=height+1; s>x; s--)
+        { 
+            printf (" ");
         }
+        for (int d=2; d<x+2; d++)
+        {
+            printf ("#");
+        }  
+    printf ("\n");
     }
+    
 }
