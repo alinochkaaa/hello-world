@@ -8,12 +8,9 @@ int main(void)
 
     printf ("How many minutes a day you spend in a shower?\n");
     int min = GetInt();
+    
     if (min>0)
-    {   
         printf ("%i minute equals %i bottles.\n", min, min*bottles);
-    }
     else
-    {
         printf ("You need to write positive number! Please try again!\n");
-    }   
 }
